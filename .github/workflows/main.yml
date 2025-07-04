@@ -4,8 +4,8 @@ on:
   push
  
 env:
-  DOCKER_USERNAME: ${{vars.DockerHubName}}
-  DOCKER_PASSWORD: ${{secrets.DockerHubPass}}
+  DOCKER_USERNAME: ${{vars.DOCKERHUBNAME}}
+  DOCKER_PASSWORD: ${{secrets.DOCKERHUBPASS}}
   DOCKER_IMAGE: KG26-26/DeploymentTutorial
   
 jobs:
