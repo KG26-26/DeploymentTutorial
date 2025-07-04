@@ -6,7 +6,7 @@ on:
 env:
   DOCKER_USERNAME: ${{vars.DOCKERHUBNAME}}
   DOCKER_PASSWORD: ${{secrets.DOCKERHUBPASS}}
-  DOCKER_IMAGE: KG26-26/DeploymentTutorial
+  DOCKER_IMAGE: kg26-26/deploymenttutorial
   
 jobs:
   build-using-docker:
