@@ -6,7 +6,7 @@ on:
 env:
   DOCKER_USERNAME: ${{vars.DockerHubName}}
   DOCKER_PASSWORD: ${{secrets.DockerHubPass}}
-  DOCKER_IMAGE: KG26-26/my-python-project
+  DOCKER_IMAGE: KG26-26/DeploymentTutorial
 jobs:
   build-using-docker:
     runs-on: ubuntu-latest
