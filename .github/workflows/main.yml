@@ -6,7 +6,7 @@ on:
 env:
   DOCKER_USERNAME: ${{vars.DOCKERHUBNAME}}
   DOCKER_PASSWORD: ${{secrets.DOCKERHUBPASS}}
-  DOCKER_IMAGE: cloudfoundry/java-buildpack/blob/main/ci
+  DOCKER_IMAGE: cloudfoundry/java-buildpack/blob/main
   
 jobs:
   build-using-docker:
