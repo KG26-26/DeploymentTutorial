@@ -7,6 +7,7 @@ env:
   DOCKER_USERNAME: ${{vars.DockerHubName}}
   DOCKER_PASSWORD: ${{secrets.DockerHubPass}}
   DOCKER_IMAGE: KG26-26/DeploymentTutorial
+  
 jobs:
   build-using-docker:
     runs-on: ubuntu-latest
@@ -18,10 +19,12 @@ jobs:
         with:
           username: ${{env.DOCKER_USERNAME}}
           password: ${{env.DOCKER_PASSWORD}}
+          
       - name: Docker Build
         run: |
           docker build -t $DOCKER_IMAGE:${{github.sha}} .
           docker tag $DOCKER_IMAGE:${{github.sha}} $DOCKER_IMAGE:latest
+          
       - name: Push the Docker Image to Hub
         run: |
           docker push $DOCKER_IMAGE:${{ github.sha }}
